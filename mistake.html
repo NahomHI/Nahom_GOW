@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), url(image/1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .navbar{
+            display: flex;
+            width: 95%;
+            margin: auto;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        h1{
+            font-size: xx-large;
+            color: rgb(233, 66, 16);
+            cursor: pointer;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            width: 550px;
+            justify-content: space-between;
+        }
+        ul li{
+            cursor: pointer;
+            transition: color  0.1s ease;
+            transition: transform  0.1s ease;
+        }
+        ul li:hover{
+            color: rgb(233, 66, 16);
+            transform: scale(1.2);
+        }
+
+        .search{
+            height: 30px;
+            border: 1px solid rgb(233, 66, 16);
+            background-color: transparent;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            text-align: center;
+            color: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            
+        }
+        
+        .search::placeholder{
+            color: white;
+        }
+        .searchbox{
+            display: flex;
+            flex-direction: row;
+        }
+        .Sbutton{
+            margin-left: 0px;
+            width: 70px;
+            height: 32px;
+            border: 1px solid #e94210;
+            background-color: rgb(233, 66, 16);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .mid{
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .info{
+            width: 50%;
+        }
+        .login{
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .loginbox{
+            height: 75vh;
+            width: 60%;
+            background:linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 6px;
+        }
+        
+        .loginhere{
+            font-size: large;
+            width: 80%;
+            height: 35PX;
+            color: #e94210;
+            border: none;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .info1{
+            color: white;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 5px;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+        .title{
+            color: white;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        span{
+            font-family: 'Times New Roman', Times, serif;
+            color: #e94210;
+        }
+        .join{
+            width: 100px;
+            height: 30px;
+            margin-left: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            border-radius: 8px;
+            background-color: #e94210;
+            text-align: center;
+            color: BLACK;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .join:hover{
+            background-color: white;
+        }
+        
+        .EandP{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 85%;
+            height: 100px;
+            
+        }
+        .email{
+            height: 30px;
+            color: white;
+            background-color: transparent;
+            border-bottom: 1px solid #e94210;
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .email::placeholder{
+            font-size: large;
+        }
+        .password{
+            height: 30px;
+            color: white;
+            background-color: transparent;
+            border-bottom: 1px solid #e94210;
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+        .password::placeholder{
+            font-size: large;
+        }
+
+        span a{
+            color: #e94210;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .loginButton{
+            font-size: large;
+            width: 80%;
+            height: 35PX;
+            background-color: #e94210;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .account{
+            color: white;
+            font-size: medium;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 20PX;
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <h1>PraRoz</h1>
+            
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SERVICE</li>
+                <li>DESIGHN</li>
+                <li>CONTACT</li>
+            </ul>
+            <div class="searchbox">
+                <input type="text" placeholder="Type to Search" class="search"/>
+                <button class="Sbutton">Search</button>
+            </div>
+
+        </div>
+
+        <div class="mid">
+
+            <div class="info">
+                <p class="title">
+                    Web Design & <br><span>Development</span><br> course
+                </p>
+
+                <p class="info1">
+                    Web Design is a specialisation of the design stream. They also use HTML, <br>CSS,WYSIWYG editing software. mark up vaildators etc... <br>to create design elements
+                </p>
+
+                <button class="join">JOIN US</button>
+            </div>
+
+            <div class="login">
+                <div class="loginbox">
+
+                    <button class="loginhere">Login Here</button>
+                    
+                    <div class="EandP">
+                        
+                        <input class="email" "text" placeholder="Enter Email Here">
+                        <input class="password" "text" placeholder="Enter Password Here">
+                        
+                    </div>
+                    
+                    <button class="loginButton">Login</button>
+
+                    <p class="account">
+                        Don't have an account <br> <span class="signup"><a href="">Sign Up</a></span> here.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
